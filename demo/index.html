@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>adom-list demo</title>
+
+  <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <script>
+    window.Polymer = {
+      dom: 'shadow',
+      lazyRegister: 'true',
+      useNativeCSSProperties: 'true'
+    }
+  </script>
+
+  <link rel="import" href="../bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../bower_components/iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../bower_components/adom-demo/adom-demo.html">
+  <link rel="import" href="../bower_components/adom-card/adom-card.html">
+  <link rel="import" href="../adom-list.html">
+
+  <style is="custom-style" include="demo-pages-shared-styles">
+    /*Common styles*/
+    
+    .component-info {
+      padding: 1em;
+    }
+    
+    .adom-list {
+      color: #3e3e3e;
+    }
+    
+    .component-description {
+      color: #999;
+    }
+    
+    demo-snippet {
+      --demo-snippet-demo: {
+        display: block;
+      }
+      ;
+    }
+  </style>
+</head>
+
+<body>
+  <adom-demo id="demo" option-selected="0">
+    <div>
+      <div class="component-info">
+        <h2 class="adom-list">Basic list of adom-card</h2>
+        <div class="component-description">
+          <p>Components description demo</p>
+        </div>
+      </div>
+      <demo-snippet>
+        <template is="dom-bind">
+          <style is="custom-style">
+            .card-list {
+              margin: 0 0.5em;
+            }
+          </style>
+          <adom-list id="component0">
+            <div class="card-list" id="list0">
+              <adom-card img-url="http://lorempixel.com/600/400/animals/3" column heading="Lorem ipsum" subheading="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+                with-shadow no-header no-footer>
+                <div class="card-body">
+                  <p>Nam eu metus auctor mauris mattis lacinia. Vivamus condimentum accumsan dui sit amet mattis. Nam at tortor
+                    eget sapien consequat sodales a eu lacus. Donec feugiat commodo mollis. Curabitur nisl est, accumsan
+                    eu blandit a, mollis ac tellus. Maecenas et sodales elit. Nunc molestie mauris eu orci congue, a consequat
+                    quam cursus. Praesent pharetra convallis erat eget aliquet. Quisque auctor rhoncus odio et efficitur.
+                    Mauris varius sapien vel sem aliquet, eget gravida mauris vestibulum.</p>
+                </div>
+              </adom-card>
+            </div>
+            <div class="card-list" id="list1">
+              <adom-card img-url="http://lorempixel.com/600/400/animals/4" column heading="Lorem ipsum" subheading="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+                with-shadow no-header no-footer>
+                <div class="card-body">
+                  <p>Nam eu metus auctor mauris mattis lacinia. Vivamus condimentum accumsan dui sit amet mattis. Nam at tortor
+                    eget sapien consequat sodales a eu lacus. Donec feugiat commodo mollis. Curabitur nisl est, accumsan
+                    eu blandit a, mollis ac tellus. Maecenas et sodales elit. Nunc molestie mauris eu orci congue, a consequat
+                    quam cursus. Praesent pharetra convallis erat eget aliquet. Quisque auctor rhoncus odio et efficitur.
+                    Mauris varius sapien vel sem aliquet, eget gravida mauris vestibulum.</p>
+                </div>
+              </adom-card>
+            </div>
+            <div class="card-list" id="list2">
+              <adom-card img-url="http://lorempixel.com/600/400/animals/2" column heading="Lorem ipsum" subheading="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+                with-shadow no-header no-footer>
+                <div class="card-body">
+                  <p>Nam eu metus auctor mauris mattis lacinia. Vivamus condimentum accumsan dui sit amet mattis. Nam at tortor
+                    eget sapien consequat sodales a eu lacus. Donec feugiat commodo mollis. Curabitur nisl est, accumsan
+                    eu blandit a, mollis ac tellus. Maecenas et sodales elit. Nunc molestie mauris eu orci congue, a consequat
+                    quam cursus. Praesent pharetra convallis erat eget aliquet. Quisque auctor rhoncus odio et efficitur.
+                    Mauris varius sapien vel sem aliquet, eget gravida mauris vestibulum.</p>
+                </div>
+              </adom-card>
+            </div>
+          </adom-list>
+          <script>
+            var component0 = document.querySelector('#component0');
+            component0.items = [
+              {
+                id: 'list0'
+              },
+              {
+                id: 'list1'
+              },
+              {
+                id: 'list2'
+              }
+            ]
+          </script>
+        </template>
+      </demo-snippet>
+    </div>
+    <div>
+      <div class="component-info">
+        <h2 class="adom-list">Basic breadcrumbs list</h2>
+        <div class="component-description">
+          <p>Components description demo</p>
+        </div>
+      </div>
+      <demo-snippet>
+        <template is="dom-bind">
+          <style is="custom-style">
+            .breadcrumb {
+              background-color: transparent;
+              color: #4286f4;
+              padding: 0.5em;
+              border: 0;
+              margin-left: 0.5em;
+              font-size: 1.4em;
+            }
+          </style>
+          <adom-list id="component1">
+            <div id="list0">
+              <button class="breadcrumb">home</button> >>
+            </div>
+            <div id="list1">
+              <button class="breadcrumb">settings</button> >>
+            </div>
+            <div id="list2">
+              <button class="breadcrumb">user</button>
+            </div>
+          </adom-list>
+          <script>
+            var component1 = document.querySelector('#component1');
+            component1.items = [
+              {
+                id: 'list0'
+              },
+              {
+                id: 'list1'
+              },
+              {
+                id: 'list2'
+              }
+            ]
+          </script>
+        </template>
+      </demo-snippet>
+    </div>
+    <div>
+      <div class="component-info">
+        <h2 class="adom-list">vertical menu list</h2>
+        <div class="component-description">
+          <p>Components description demo</p>
+        </div>
+      </div>
+      <demo-snippet>
+        <template is="dom-bind">
+          <style is="custom-style">
+            .menu {
+              background-color: #009688;
+              color: white;
+              padding: 1em;
+              font-size: 1.2em;
+              border: 0;
+              width: 300px;
+              text-align: left;
+            }
+            
+            sidebar {
+              width: 300px;
+            }
+          </style>
+          <sidebar>
+            <adom-list id="component2" column>
+              <div id="list0">
+                <button class="menu">home</button>
+              </div>
+              <div id="list1">
+                <button class="menu">settings</button>
+              </div>
+              <div id="list2">
+                <button class="menu">user</button>
+              </div>
+            </adom-list>
+          </sidebar>
+          <script>
+            var component2 = document.querySelector('#component2');
+            component2.items = [
+              {
+                id: 'list0'
+              },
+              {
+                id: 'list1'
+              },
+              {
+                id: 'list2'
+              }
+            ]
+          </script>
+        </template>
+      </demo-snippet>
+    </div>
+  </adom-demo>
+  <script>
+    var menu = [
+      { optionName: 'Basic list of adom-card' },
+      { optionName: 'Basic breadcrumbs list' },
+      { optionName: 'vertical menu list' }
+    ];
+    var demo = document.getElementById('demo');
+    demo.optionsMenu = menu;
+  </script>
+</body>
+
+</html>
