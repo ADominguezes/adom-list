@@ -1,7 +1,7 @@
 {
   "name": "adom-list",
   "version": "1.0.0",
-  "description": "A component description",
+  "description": "It´s a component that show a list and it´s possible add something in the list",
   "main": "adom-list.html",
   "keywords": [],
   "ignore": [],
