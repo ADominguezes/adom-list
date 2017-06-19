@@ -9,7 +9,7 @@
     "polymer": "Polymer/polymer#^1.6.0"
   },
   "devDependencies": {
-    "adom-demo": "https://github.com/ADominguezes/adom-demo.git#^0.0.2",
+    "adom-demo": "https://github.com/ADominguezes/adom-demo.git#^1.0.1",
     "adom-card": "https://github.com/ADominguezes/adom-card.git",
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
